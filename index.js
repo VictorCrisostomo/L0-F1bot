@@ -1,6 +1,10 @@
+
+
 const Discord = require('discord.js');
 const ytdl = require('ytdl-core');
 const config = require('./config.json');
+
+
 
 // import 'dotenv/config'
 // import discord from "discord.js"
@@ -27,7 +31,17 @@ client.on("ready", () =>{
 });
 
 client.on('ready', async () => {
-    client.user.setActivity('Coding with Lo-Fi');
+
+    let status = [
+        `👨‍💻Coding with Lo-Fi🎧`,
+        `📚Studing with Lo-Fi🎧`
+      ];
+      let i = 0;
+  
+      setInterval(() => client.user.setActivity(`${status[i++ % status.length]}`, {
+        type: 'WATCHING'
+      }), 5000);
+
     let channel = client.channels.cache.get(config.CHANNEL_ID) || await client.channels.fetch(config.CHANNEL_ID)
 
     if (!channel) {

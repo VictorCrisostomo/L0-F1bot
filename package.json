@@ -25,6 +25,7 @@
   "homepage": "https://github.com/VictorCrisostomo/L0-F1bot#readme",
   "dependencies": {
     "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0",
     "ffmpeg-static": "^4.4.0",
     "opusscript": "0.0.8",
     "ytdl-core": "^4.8.3"
